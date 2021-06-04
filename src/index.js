@@ -93,10 +93,6 @@ import "./modules/typography";
 
 import "./modules/z-index";
 
-//////////////////////////////////////////////
-// Environments (For Testing Webpack)
-//////////////////////////////////////////////
-
 if (process.env.NODE_ENV === 'development') {
     console.log("Development Mode");
 } else if (process.env.NODE_ENV === 'production') {

@@ -19,10 +19,16 @@ module.exports = merge(common, {
     module: {
         rules: [
             {
-                test: /\.m?js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
+                    options: {
+                        presets : [
+                            "@babel/preset-env",
+                            "@babel/preset-react"
+                        ]
+                    }
                 }
             },
             {
@@ -39,6 +45,9 @@ module.exports = merge(common, {
                 ],
             },
         ],
+    },
+    resolve: {
+      extensions: ['*', '.js', '.jsx'],
     },
     plugins: [
         new HtmlWebpackPlugin({

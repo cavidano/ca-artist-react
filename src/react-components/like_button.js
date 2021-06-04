@@ -1,23 +1,29 @@
 'use strict';
 
+// npx babel --watch src/react-components --out-dir dist/js --presets react-app/prod
+
 const e = React.createElement;
 
 class LikeButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { liked: false };
-  }
+  
+  state = { liked: false };
+
+  onClick = (e) => {
+    this.setState({ liked: true });
+  };
 
   render() {
+
     if (this.state.liked) {
       return 'You liked this.';
     }
 
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
+    return (
+      <button onClick={this.onClick}>
+        Like
+      </button>
     );
+    
   }
 }
 
