@@ -30,42 +30,6 @@
         <!-- For keyboard users -->
         <a class="focusable-only" href="#skip-header-target">Skip Header</a>
 
-        <div class="theme-dark font-size-md">
-
-            <div class="grid grid--cells-fit justify-content-between align-items-center">
-
-                <div class="grid__cell container">
-                    <p class="truncate display-none display-block--md">Name of Office</p>
-                </div>
-
-                <nav class="grid__cell" aria-label="N Y C Resources">
-                    <ul class="nav nav--divider nav--horizontal">
-                        <li>
-                            <a href="#1">
-                                <span class="screen-reader-only">Search all n y c.gov</span>
-                                <strong aria-hidden="true">Search all NYC.gov</strong>
-                            </a>
-                        </li>
-                        <li>
-                        <a href="#1">
-                            <span class="screen-reader-only">Visit NYC 3 1 1</span>
-                            <span class="nyc_icon_311 font-size-lg"></span>
-                        </a>
-                        </li>
-                        <li>
-                            <a href="#1" data-logo="brand">
-                                <span class="screen-reader-only">Go to n y c.gov</span>
-                                <span class="nyc_icon_bubble-logo font-size-lg"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
-            <!-- .grid -->
-
-        </div>
-
         <div class="primary-nav--inline--lg">
 
             <div class="primary-nav__logo">
@@ -445,6 +409,8 @@
                 </div>
                 <!-- .grid -->
 
+                <div id="like_button_container"></div>
+
             </div>
 
         </section>
@@ -686,6 +652,14 @@
 
     <!-- NYC Core Javascript -->
     <script src="./dist/js/nyc_core.js"></script>
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="../src/react/like_button.js"></script>
 
 </body>
 
